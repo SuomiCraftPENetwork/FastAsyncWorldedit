@@ -323,14 +323,14 @@ public class Settings extends Config {
                 " - IMPROPER USE CAN CAUSE WORLD CORRUPTION!",
         })
         public boolean ANVIL_QUEUE_MODE = false;
-        @Comment({
+        /*@Comment({
                 "[SAFE] Dynamically increase the number of chunks rendered",
                 " - Requires Paper: ci.destroystokyo.com/job/PaperSpigot/",
                 " - Set your server view distance to 3 (spigot.yml, server.properties)",
                 " - Based on tps and player movement",
                 " - Please provide feedback",
         })
-        public int DYNAMIC_CHUNK_RENDERING = -1;
+        public int DYNAMIC_CHUNK_RENDERING = -1;*/
         @Comment({
                 "[SAFE] Allows brushes to be persistent",
         })

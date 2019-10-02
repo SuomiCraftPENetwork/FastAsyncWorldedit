@@ -120,9 +120,9 @@ public class FaweBukkit implements IFawe, Listener {
                 debug(" - This is only a recommendation");
                 debug("==============================");
             }
-            if (Bukkit.getVersion().contains("git-Paper") && Settings.IMP.EXPERIMENTAL.DYNAMIC_CHUNK_RENDERING > 1) {
+            /*if (Bukkit.getVersion().contains("git-Paper") && Settings.IMP.EXPERIMENTAL.DYNAMIC_CHUNK_RENDERING > 1) {
                 new RenderListener(plugin);
-            }
+            }*/
             try {
                 Fawe.get().setChatManager(new BukkitChatManager());
             } catch (Throwable ignore) {
