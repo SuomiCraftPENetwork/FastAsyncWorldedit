@@ -103,6 +103,7 @@ public class WorldEditListener implements Listener {
     @EventHandler(ignoreCancelled = true,priority = EventPriority.LOWEST)
     public void onPlayerChat(PlayerChatEvent event) {
         String message = event.getMessage();
+        if (message.equals("...")) return; // stfu fawe we want to use ... in chat
         if (message.charAt(0) == '.') {
             String[] split = event.getMessage().split(" ");
             if (split.length > 0) {

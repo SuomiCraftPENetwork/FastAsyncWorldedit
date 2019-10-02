@@ -9,8 +9,10 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-import sun.reflect.ConstructorAccessor;
-import sun.reflect.FieldAccessor;
+import jdk.internal.reflect.ConstructorAccessor;
+import jdk.internal.reflect.FieldAccessor;
+//import sun.reflect.ConstructorAccessor;
+//import sun.reflect.FieldAccessor;
 import sun.reflect.ReflectionFactory;
 
 /**
@@ -115,7 +117,7 @@ public class ReflectionUtils {
         parameterTypes[1] = int.class;
         System.arraycopy(additionalParameterTypes, 0,
                 parameterTypes, 2, additionalParameterTypes.length);
-        return ReflectionFactory.getReflectionFactory().newConstructorAccessor(enumClass.getDeclaredConstructor(parameterTypes));
+        return null/*ReflectionFactory.getReflectionFactory().newConstructorAccessor(enumClass.getDeclaredConstructor(parameterTypes))*/;
     }
 
     public static void setFailsafeFieldValue(Field field, Object target, Object value)
@@ -135,12 +137,13 @@ public class ReflectionUtils {
         modifiers &= ~Modifier.FINAL;
         modifiersField.setInt(field, modifiers);
 
-        try {
+        /*try {
             FieldAccessor fa = ReflectionFactory.getReflectionFactory().newFieldAccessor(field, false);
             fa.set(target, value);
         } catch (NoSuchMethodError error) {
             field.set(target, value);
-        }
+        }*/
+        field.set(target, value);
     }
 
     private static void blankField(Class<?> enumClass, String fieldName)

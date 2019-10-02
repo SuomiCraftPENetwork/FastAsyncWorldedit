@@ -31,9 +31,9 @@ public class Settings extends Config {
             " - confirm = prompt an admin to confirm each update",
             " - false = do not update the plugin"
     })
-    public String UPDATE = "confirm";
+    public String UPDATE = "false";
     @Comment("Send anonymous usage statistics")
-    public boolean METRICS = true;
+    public boolean METRICS = false;
     @Comment({
             "Set true to enable WorldEdit restrictions per region (e.g. PlotSquared or WorldGuard).",
             "To be allowed to WorldEdit in a region, users need the appropriate",
@@ -47,7 +47,7 @@ public class Settings extends Config {
             " - Bypass with `/wea` or `//fast` or `fawe.bypass`",
             " - Disable with 100 or -1."
     })
-    public int MAX_MEMORY_PERCENT = 95;
+    public int MAX_MEMORY_PERCENT = 90;
 
     @Create
     public CLIPBOARD CLIPBOARD;
@@ -200,7 +200,7 @@ public class Settings extends Config {
                 "9 = 1 x high, 1 x medium, 3 x fast (best compression)",
                 "NOTE: If using disk, do some compression (3+) as smaller files save faster"
         })
-        public int COMPRESSION_LEVEL = 3;
+        public int COMPRESSION_LEVEL = 1;
         @Comment({
                 "The buffer size for compression:",
                 " - Larger = better ratio but uses more upfront memory",
@@ -394,7 +394,7 @@ public class Settings extends Config {
         })
         public List<String> ALLOWED_PLUGINS = new ArrayList<>();
         @Comment("Should debug messages be sent when third party extents are used?")
-        public boolean DEBUG = true;
+        public boolean DEBUG = false;
     }
 
     @Comment("Generic tick limiter (not necessarily WorldEdit related, but useful to stop abuse)")

@@ -51,15 +51,13 @@ public class NukkitPlayer extends LocalPlayer {
 
     @Override
     public int getItemInHand() {
-        PlayerInventory inv = player.getInventory();
-        Item itemStack = inv.getItemInHand();
+        Item itemStack = player.getInventory().getItemInHand();
         return itemStack != null ? itemStack.getId() : 0;
     }
 
     @Override
     public BaseBlock getBlockInHand() throws WorldEditException {
-        PlayerInventory inv = player.getInventory();
-        Item itemStack = inv.getItemInHand();
+        Item itemStack = player.getInventory().getItemInHand();
         if (itemStack == null) {
             return EditSession.nullBlock;
         }
@@ -139,8 +137,7 @@ public class NukkitPlayer extends LocalPlayer {
 
     @Override
     public boolean hasPermission(String perm) {
-        NukkitConfiguration config = platform.getMod().getWEConfig();
-        return (!config.noOpPermissions && player.isOp()) || player.hasPermission(perm);
+        return (!platform.getMod().getWEConfig().noOpPermissions && player.isOp()) || player.hasPermission(perm);
     }
 
     @Override
@@ -240,5 +237,4 @@ public class NukkitPlayer extends LocalPlayer {
         }
 
     }
-
 }

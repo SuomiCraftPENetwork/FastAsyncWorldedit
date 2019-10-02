@@ -17,7 +17,7 @@ import com.boydti.fawe.bukkit.util.cui.StructureCUI;
 import com.boydti.fawe.bukkit.util.image.BukkitImageViewer;
 import com.boydti.fawe.bukkit.v0.BukkitQueue_0;
 import com.boydti.fawe.bukkit.v0.BukkitQueue_All;
-import com.boydti.fawe.bukkit.v0.ChunkListener_8;
+//import com.boydti.fawe.bukkit.v0.ChunkListener_8;
 import com.boydti.fawe.bukkit.v0.ChunkListener_9;
 import com.boydti.fawe.bukkit.v1_10.BukkitQueue_1_10;
 import com.boydti.fawe.bukkit.v1_11.BukkitQueue_1_11;
@@ -143,7 +143,7 @@ public class FaweBukkit implements IFawe, Listener {
                 // The tick limiter
                 try {
                     Class.forName("sun.misc.SharedSecrets");
-                    new ChunkListener_8();
+                    //new ChunkListener_8();
                 } catch (ClassNotFoundException e) {
                     new ChunkListener_9();
                 }

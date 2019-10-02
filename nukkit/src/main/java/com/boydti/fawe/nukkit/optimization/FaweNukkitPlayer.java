@@ -47,7 +47,7 @@ public class FaweNukkitPlayer extends FawePlayer<Player> {
     }
 
     public void sendTitle(String title, String sub) {
-        throw new UnsupportedOperationException("Titles are not implemented in MCPE!");
+        this.parent.sendTitle(title, sub);
     }
 
     @Override

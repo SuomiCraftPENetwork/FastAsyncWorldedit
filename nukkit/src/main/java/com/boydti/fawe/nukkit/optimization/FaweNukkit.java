@@ -89,7 +89,7 @@ public class FaweNukkit implements IFawe, Listener {
                 ElementButton button = simple.getClickedButton();
                 int index = simple.getClickedButtonId();
 
-                System.out.println("Simple: " + index);
+                //System.out.println("Simple: " + index);
 
                 responseWindow.respond(Collections.singletonMap(index, "true"));
 
@@ -111,7 +111,7 @@ public class FaweNukkit implements IFawe, Listener {
 
                 responseWindow.respond(parsedResponses);
 
-                System.out.println("Custom: " + parsedResponses);
+                //System.out.println("Custom: " + parsedResponses);
             }
         }
         // TODO
@@ -204,8 +204,8 @@ public class FaweNukkit implements IFawe, Listener {
 
     @Override
     public void startMetrics() {
-        Metrics metrics = new Metrics(plugin);
-        metrics.start();
+        //Metrics metrics = new Metrics(plugin);
+        //metrics.start();
     }
 
     @Override

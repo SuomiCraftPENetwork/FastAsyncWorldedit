@@ -19,6 +19,7 @@ import com.sk89q.worldedit.LocalSession;
 import com.sk89q.worldedit.command.tool.Tool;
 
 public class BrushListener implements Listener {
+
     public BrushListener(Plugin plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
@@ -31,8 +32,7 @@ public class BrushListener implements Listener {
         }
         FawePlayer<Object> fp = FawePlayer.wrap(nukkitPlayer);
         com.sk89q.worldedit.entity.Player player = fp.getPlayer();
-        LocalSession session = fp.getSession();
-        Tool tool = session.getTool(player);
+        Tool tool = fp.getSession().getTool(player);
         if (tool instanceof ScrollTool) {
             final int slot = event.getInventorySlot();
             final int oldSlot = event.getSlot();
@@ -59,11 +59,9 @@ public class BrushListener implements Listener {
         Location from = event.getFrom();
         Location to = event.getTo();
         if ((from.getYaw() != to.getYaw() &&  from.getPitch() != to.getPitch()) || from.getFloorX() != to.getFloorX() || from.getFloorZ() != to.getFloorZ() || from.getFloorY() != to.getFloorY()) {
-            Player nukkitPlayer = event.getPlayer();
-            FawePlayer<Object> fp = FawePlayer.wrap(nukkitPlayer);
+            FawePlayer<Object> fp = FawePlayer.wrap(event.getPlayer());
             com.sk89q.worldedit.entity.Player player = fp.getPlayer();
-            LocalSession session = fp.getSession();
-            Tool tool = session.getTool(player);
+            Tool tool = fp.getSession().getTool(player);
             if (tool != null) {
                 if (tool instanceof MovableTool) {
                     ((MovableTool) tool).move(player);
@@ -80,9 +78,7 @@ public class BrushListener implements Listener {
                 return;
             }
             FawePlayer<Object> fp = FawePlayer.wrap(nukkitPlayer);
-            com.sk89q.worldedit.entity.Player player = fp.getPlayer();
-            LocalSession session = fp.getSession();
-            Tool tool = session.getTool(player);
+            Tool tool = fp.getSession().getTool(fp.getPlayer());
             if (tool instanceof ResettableTool) {
                 if (((ResettableTool) tool).reset()) {
                     event.setCancelled(true);
