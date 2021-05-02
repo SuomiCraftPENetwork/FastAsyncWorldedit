@@ -299,7 +299,7 @@ public class EditSession extends AbstractDelegateExtent implements HasFaweQueue,
             }
         }
         if (allowedRegions == null) {
-            if (player != null && !player.hasPermission("fawe.bypass") && !player.hasPermission("fawe.bypass.regions") && !(queue instanceof VirtualWorld)) {
+            if (player != null && !player.hasPermission("fawe.bypass") && !player.hasPermission("fawe.bypass.regions") && !(queue instanceof VirtualWorld) && !(player.hasPermission("suomicraftpe.staff") && player.getWorld().getName().equals("event"))) {
                 allowedRegions = player.getCurrentRegions();
             }
         }

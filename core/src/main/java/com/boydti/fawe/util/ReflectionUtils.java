@@ -9,8 +9,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-import jdk.internal.reflect.ConstructorAccessor;
-import jdk.internal.reflect.FieldAccessor;
+//import jdk.internal.reflect.ConstructorAccessor;
+//import jdk.internal.reflect.FieldAccessor;
 //import sun.reflect.ConstructorAccessor;
 //import sun.reflect.FieldAccessor;
 import sun.reflect.ReflectionFactory;
@@ -31,7 +31,8 @@ public class ReflectionUtils {
     }
 
     public static <T extends Enum<?>> T addEnum(Class<T> enumType, String enumName, Class<?>[] additionalTypes, Object[] additionalValues) {
-
+        return null;
+/*
         // 0. Sanity checks
         if (!Enum.class.isAssignableFrom(enumType)) {
             throw new RuntimeException("class " + enumType + " is not an instance of Enum");
@@ -73,7 +74,7 @@ public class ReflectionUtils {
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage(), e);
-        }
+        }*/
     }
 
     public static <T extends Enum<?>> void clearEnum(Class<T> enumType) {
@@ -101,7 +102,7 @@ public class ReflectionUtils {
         }
     }
 
-    private static Object makeEnum(Class<?> enumClass, String value, int ordinal,
+    /*private static Object makeEnum(Class<?> enumClass, String value, int ordinal,
                                    Class<?>[] additionalTypes, Object[] additionalValues) throws Exception {
         Object[] parms = new Object[additionalValues.length + 2];
         parms[0] = value;
@@ -118,7 +119,7 @@ public class ReflectionUtils {
         System.arraycopy(additionalParameterTypes, 0,
                 parameterTypes, 2, additionalParameterTypes.length);
         return null/*ReflectionFactory.getReflectionFactory().newConstructorAccessor(enumClass.getDeclaredConstructor(parameterTypes))*/;
-    }
+    //}
 
     public static void setFailsafeFieldValue(Field field, Object target, Object value)
             throws NoSuchFieldException, IllegalAccessException {

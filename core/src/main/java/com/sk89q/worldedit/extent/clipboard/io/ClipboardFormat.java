@@ -610,14 +610,14 @@ public enum ClipboardFormat {
         return null;
     }
 
-    public static ClipboardFormat addFormat(IClipboardFormat instance) {
+    /*public static ClipboardFormat addFormat(IClipboardFormat instance) {
         ClipboardFormat newEnum = ReflectionUtils.addEnum(ClipboardFormat.class, instance.getName());
         newEnum.format = instance;
         for (String alias : newEnum.getAliases()) {
             aliasMap.put(alias, newEnum);
         }
         return newEnum;
-    }
+    }*/
 
     public static Class<?> inject() {
         return ClipboardFormat.class;
