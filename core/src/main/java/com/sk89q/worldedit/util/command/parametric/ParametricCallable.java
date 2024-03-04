@@ -19,7 +19,6 @@
 
 package com.sk89q.worldedit.util.command.parametric;
 
-import com.boydti.fawe.command.SuggestInputParseException;
 import com.google.common.primitives.Chars;
 import com.sk89q.minecraft.util.commands.Command;
 import com.sk89q.minecraft.util.commands.CommandContext;
@@ -27,7 +26,6 @@ import com.sk89q.minecraft.util.commands.CommandException;
 import com.sk89q.minecraft.util.commands.CommandLocals;
 import com.sk89q.minecraft.util.commands.CommandPermissions;
 import com.sk89q.minecraft.util.commands.CommandPermissionsException;
-import com.sk89q.minecraft.util.commands.SuggestionContext;
 import com.sk89q.minecraft.util.commands.WrappedCommandException;
 import com.sk89q.worldedit.util.command.CommandCallable;
 import com.sk89q.worldedit.util.command.InvalidUsageException;

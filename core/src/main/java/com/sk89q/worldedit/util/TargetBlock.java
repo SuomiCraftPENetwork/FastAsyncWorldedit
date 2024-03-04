@@ -19,7 +19,6 @@
 
 package com.sk89q.worldedit.util;
 
-import com.boydti.fawe.wrappers.WorldWrapper;
 import com.sk89q.worldedit.*;
 import com.sk89q.worldedit.blocks.BlockID;
 import com.sk89q.worldedit.blocks.BlockType;

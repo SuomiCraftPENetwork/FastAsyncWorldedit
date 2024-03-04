@@ -142,7 +142,7 @@ public class NukkitPlatform extends AbstractPlatform implements MultiUserPlatfor
 
     @Override
     public String getPlatformName() {
-        return "Nukkit-Official";
+        return "Nukkit PM1E";
     }
 
     @Override

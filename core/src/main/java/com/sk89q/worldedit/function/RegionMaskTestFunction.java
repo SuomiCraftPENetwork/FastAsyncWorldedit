@@ -22,7 +22,6 @@ package com.sk89q.worldedit.function;
 import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.WorldEditException;
 import com.sk89q.worldedit.function.mask.Mask;
-import com.sk89q.worldedit.regions.Region;
 
 
 import static com.google.common.base.Preconditions.checkNotNull;

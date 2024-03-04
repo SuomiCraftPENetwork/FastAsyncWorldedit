@@ -8,7 +8,7 @@ clean { delete "../target" }
 dependencies {
     compile project(':core')
 //    compile 'cn.nukkit:nukkit:1.0-SNAPSHOT'
-    compile name: 'nukkit-1.0-SNAPSHOT'
+    compile name: 'Nukkit-PM1E'
     compile name: 'worldedit-core-6.1.4-SNAPSHOT-dist'
 }
 

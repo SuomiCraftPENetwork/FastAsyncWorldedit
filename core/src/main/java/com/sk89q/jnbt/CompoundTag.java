@@ -1,6 +1,5 @@
 package com.sk89q.jnbt;
 
-import com.sk89q.worldedit.function.entity.ExtentEntityCopy;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;

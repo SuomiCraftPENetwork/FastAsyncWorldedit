@@ -1,16 +1,8 @@
 package com.boydti.fawe.command;
 
-import com.boydti.fawe.util.MainUtil;
-import com.boydti.fawe.util.StringMan;
-import com.sk89q.worldedit.WorldEditException;
 import com.sk89q.worldedit.extension.input.InputParseException;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
-import java.util.function.Supplier;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

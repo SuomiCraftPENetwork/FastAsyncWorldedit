@@ -21,7 +21,7 @@ package com.boydti.fawe.nukkit.core;
 
 import cn.nukkit.AdventureSettings;
 import cn.nukkit.Player;
-import cn.nukkit.inventory.PlayerInventory;
+import cn.nukkit.block.Block;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.Location;
 import com.google.common.base.Charsets;
@@ -58,10 +58,11 @@ public class NukkitPlayer extends LocalPlayer {
     @Override
     public BaseBlock getBlockInHand() throws WorldEditException {
         Item itemStack = player.getInventory().getItemInHand();
-        if (itemStack == null) {
+        Block block;
+        if (itemStack == null || (block = itemStack.getBlockUnsafe()) == null) {
             return EditSession.nullBlock;
         }
-        return new BaseBlock(itemStack.getId(), itemStack.getMaxDurability() != 0 ? 0 : itemStack.getDamage());
+        return new BaseBlock(block.getId(), block.getDamage());
     }
 
     @Override
@@ -88,7 +89,7 @@ public class NukkitPlayer extends LocalPlayer {
 
     @Override
     public void giveItem(int type, int amt) {
-        player.getInventory().addItem(new Item(type, 0, amt));
+        player.getInventory().addItem(Item.get(type, 0, amt));
     }
 
     @Override

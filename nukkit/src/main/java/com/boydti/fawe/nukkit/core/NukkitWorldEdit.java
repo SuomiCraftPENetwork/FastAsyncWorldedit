@@ -19,7 +19,6 @@
 
 package com.boydti.fawe.nukkit.core;
 
-import cn.nukkit.Nukkit;
 import cn.nukkit.Player;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
@@ -228,6 +227,6 @@ public class NukkitWorldEdit extends PluginBase {
      * @return a version string
      */
     public String getInternalVersion() {
-        return Nukkit.API_VERSION;
+        return "1.0.x";
     }
 }

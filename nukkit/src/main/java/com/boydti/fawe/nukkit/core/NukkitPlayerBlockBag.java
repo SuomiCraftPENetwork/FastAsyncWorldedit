@@ -180,7 +180,7 @@ public class NukkitPlayerBlockBag extends BlockBag {
         }
 
         if (freeSlot > -1) {
-            items.put(freeSlot, new Item(id, 0, amount));
+            items.put(freeSlot, Item.get(id, 0, amount));
             return;
         }
 

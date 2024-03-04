@@ -14,7 +14,7 @@ import com.boydti.fawe.object.FaweQueue;
 import com.boydti.fawe.util.MainUtil;
 import com.sk89q.jnbt.CompoundTag;
 import com.sk89q.worldedit.LocalWorld;
-import com.sk89q.worldedit.MutableBlockVector2D;
+
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;

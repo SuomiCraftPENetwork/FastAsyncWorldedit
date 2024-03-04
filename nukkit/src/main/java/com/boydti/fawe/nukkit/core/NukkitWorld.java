@@ -1,5 +1,7 @@
 package com.boydti.fawe.nukkit.core;
 
+import cn.nukkit.block.Block;
+import cn.nukkit.block.BlockUnknown;
 import cn.nukkit.blockentity.BlockEntity;
 import cn.nukkit.blockentity.BlockEntityChest;
 import cn.nukkit.entity.Entity;
@@ -204,7 +206,7 @@ public class NukkitWorld extends LocalWorld {
     @Override
     public void dropItem(Vector pt, BaseItemStack item) {
         Level world = getLevel();
-        Item nukkitItem = new Item(item.getType(), item.getAmount(),
+        Item nukkitItem = Item.get(item.getType(), item.getAmount(),
                 item.getData());
         world.dropItem(NukkitUtil.toLocation(world, pt), nukkitItem);
     }
@@ -212,11 +214,11 @@ public class NukkitWorld extends LocalWorld {
     @SuppressWarnings("deprecation")
     @Override
     public boolean isValidBlockType(int type) {
-        Item item = Item.get(type);
-        if (item == null) {
+        Block block = Block.get(type);
+        if (block == null) {
             return false;
         }
-        return item != null && item.getId() < 256 && item.getBlock() != null;
+        return !(block instanceof BlockUnknown);
     }
 
     @Override

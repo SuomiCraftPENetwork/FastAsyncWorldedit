@@ -10,8 +10,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.function.Function;
-import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
 
 public class StringMan {
     public static String replaceFromMap(final String string, final Map<String, String> replacements) {

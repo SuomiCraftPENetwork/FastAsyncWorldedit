@@ -113,6 +113,17 @@ public class DefaultBlockParser extends InputParser<BaseBlock> {
     private BaseBlock parseLogic(String input, ParserContext context)
             throws InputParseException, NoMatchException,
             DisallowedUsageException {
+        try {
+            String[] split = input.split(":");
+            if (split.length == 2) {
+                return new BaseBlock(Integer.parseInt(split[0]), Integer.parseInt(split[1]));
+            }
+            if (split.length == 1) {
+                return new BaseBlock(Integer.parseInt(split[0]));
+            }
+            throw new NoMatchException("Does not match a valid block type: '" + input + "'");
+        } catch (NumberFormatException ignore) {}
+
         BlockType blockType;
         String[] blockAndExtraData = input.split("\\|");
         String[] blockLocator = blockAndExtraData[0].split(":", 3);

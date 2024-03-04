@@ -1,6 +1,5 @@
 package com.boydti.fawe.object.extent;
 
-import com.boydti.fawe.util.ReflectionUtils;
 import com.sk89q.jnbt.CompoundTag;
 import com.sk89q.jnbt.Tag;
 import com.sk89q.worldedit.Vector;
@@ -14,7 +13,6 @@ import com.sk89q.worldedit.util.Location;
 import com.sk89q.worldedit.world.NbtValued;
 
 import javax.annotation.Nullable;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 

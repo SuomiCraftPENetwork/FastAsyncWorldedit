@@ -36,3 +36,4 @@ wiki_permissions.md
 *.iml
 /obj
 docs/
+nukkit/lib/

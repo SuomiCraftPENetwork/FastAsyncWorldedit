@@ -56,7 +56,6 @@ import com.sk89q.worldedit.util.command.parametric.Optional;
 import com.sk89q.worldedit.util.io.file.FilenameException;
 import com.sk89q.worldedit.world.registry.WorldData;
 
-import javax.annotation.Nullable;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -72,7 +71,6 @@ import java.util.regex.Pattern;
 
 
 import static com.boydti.fawe.util.ReflectionUtils.as;
-import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * Commands that work with schematic files.

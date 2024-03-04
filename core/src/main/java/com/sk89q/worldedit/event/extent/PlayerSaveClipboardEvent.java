@@ -1,10 +1,7 @@
 package com.sk89q.worldedit.event.extent;
 
 import com.sk89q.worldedit.entity.Player;
-import com.sk89q.worldedit.event.Cancellable;
-import com.sk89q.worldedit.event.Event;
 import com.sk89q.worldedit.extent.clipboard.Clipboard;
-import com.sk89q.worldedit.session.ClipboardHolder;
 
 import java.net.URI;
 

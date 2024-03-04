@@ -15,7 +15,6 @@ import com.boydti.fawe.object.FawePlayer;
 import com.boydti.fawe.object.brush.MovableTool;
 import com.boydti.fawe.object.brush.ResettableTool;
 import com.boydti.fawe.object.brush.scroll.ScrollTool;
-import com.sk89q.worldedit.LocalSession;
 import com.sk89q.worldedit.command.tool.Tool;
 
 public class BrushListener implements Listener {
